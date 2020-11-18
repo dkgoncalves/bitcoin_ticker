@@ -26,6 +26,9 @@ class NetWork {
         double rate = jsonDecode(response.body)['rate'];
         btcRate = rate.toStringAsFixed(0);
       }
+      else {
+        print(jsonDecode(response.body)['error']);
+      }
     }
     catch(e) {
       print(e);
